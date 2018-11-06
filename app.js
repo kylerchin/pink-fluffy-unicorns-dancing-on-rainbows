@@ -32,24 +32,24 @@ client.on("guildDelete", guild => {
 });
 
 
-client.on("message", async message => {
+client.on("message", async msg => {
   // This event will run on every single message received, from any channel or DM.
 
-  console.log(message.content);
+  console.log(msg.content);
 
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
-  if(message.author.bot) return;
+  if(msg.author.bot) return;
 
   // Also good practice to ignore any message that does not start with our prefix,
   // which is set in the configuration file.
-  if(message.content.indexOf(config.prefix) !== 0) return;
+  if(msg.content.indexOf(config.prefix) !== 0) return;
 
   // Here we separate our "command" name, and our "arguments" for the command.
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
   // command = say
   // args = ["Is", "this", "the", "real", "life?"]
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
   // Let's go with a few common example commands! Feel free to delete or change those.
@@ -57,57 +57,57 @@ client.on("message", async message => {
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-    const m = await message.channel.send("Ping?");
-    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+    const m = await msg.channel.send("Ping?");
+    m.edit(`Pong! Latency is ${m.createdTimestamp - msg.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
 
   if(command === "lyrics" || command === "lyric") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use.
     // To get the "message" itself we join the `args` back into a string with spaces:
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-    message.delete().catch(O_o=>{});
+    msg.delete().catch(O_o=>{});
     // And we get the bot to say the thing:
-    message.channel.send("**[Hook]**");
+    msg.channel.send("**[Hook]**");
     var step1;
     for (step1 = 0; step1 < 4; step1++) {
       // Runs 4 times, with values of step 0 through 3.
-      message.channel.send("Pink fluffy unicorns dancing on rainbows");
+      msg.channel.send("Pink fluffy unicorns dancing on rainbows");
     }
-    message.channel.send("===");
+    msg.channel.send("===");
 
-    message.channel.send("[Bridge]");
-    message.channel.send("Let's test your knowledge and see what you've learned so far! What colour are the unicorns?");
-    message.channel.send("PINK!");
-    message.channel.send("Where are they dancing?");
-    message.channel.send("A RAINBOW!");
-    message.channel.send("Please use one word to describe the texture of their magical fur.");
-    message.channel.send('"... Smiles!" "YEAH!"');
-    message.channel.send("===");
+    msg.channel.send("[Bridge]");
+    msg.channel.send("Let's test your knowledge and see what you've learned so far! What colour are the unicorns?");
+    msg.channel.send("PINK!");
+    msg.channel.send("Where are they dancing?");
+    msg.channel.send("A RAINBOW!");
+    msg.channel.send("Please use one word to describe the texture of their magical fur.");
+    msg.channel.send('"... Smiles!" "YEAH!"');
+    msg.channel.send("===");
 
-    message.channel.send("[Hook]");
+    msg.channel.send("[Hook]");
     var step2;
     for (step2 = 0; step2 < 7; step2++) {
       // Runs 4 times, with values of step 0 through 6.
-      message.channel.send("Pink fluffy unicorns dancing on rainbows");
+      msg.channel.send("Pink fluffy unicorns dancing on rainbows");
     }
-    message.channel.send("Pink fluffy unicorns dancing on dancing on rain");
+    msg.channel.send("Pink fluffy unicorns dancing on dancing on rain");
   }
 
   if(command === "video" || command === "v" || command === "music") {
-    message.channel.send("https://youtu.be/eWM2joNb9NE");
+    msg.channel.send("https://youtu.be/eWM2joNb9NE");
   }
 
   if(command === "about") {
-    message.channel.send('Back when Andrew Huang used to create short songs based on listener requests under the name “Songs To Wear Pants To”, a user by the name of “SexyBuksa” requested Huang to create a song using the title “Pink fluffy Unicorns, dancing on rainbows!” This song was created from that request.');
-    message.channel.send('https://youtu.be/3i7qlFz4-1Q');
+    msg.channel.send('Back when Andrew Huang used to create short songs based on listener requests under the name “Songs To Wear Pants To”, a user by the name of “SexyBuksa” requested Huang to create a song using the title “Pink fluffy Unicorns, dancing on rainbows!” This song was created from that request.');
+    msg.channel.send('https://youtu.be/3i7qlFz4-1Q');
   }
 
   if(command === "channel") {
-    message.channel.send('https://www.youtube.com/channel/UCdcemy56JtVTrsFIOoqvV8g');
+    msg.channel.send('https://www.youtube.com/channel/UCdcemy56JtVTrsFIOoqvV8g');
   }
 
   if(command === "spotify") {
-    message.channel.send("https://open.spotify.com/track/4Xn2RsLiDUDisOgJ24FigK?autoplay=true&v=T");
+    msg.channel.send("https://open.spotify.com/track/4Xn2RsLiDUDisOgJ24FigK?autoplay=true&v=T");
   }
 
   if(command === "help" || command === "h") {
