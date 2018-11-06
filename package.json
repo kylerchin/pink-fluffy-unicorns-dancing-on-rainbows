@@ -1,0 +1,23 @@
+{
+  "name": "pink-fluffy-unicorns-dancing-on-rainbows",
+  "version": "1.0.0",
+  "description": "Pink Fluffy Unicorns Dancing on Rainbows!",
+  "main": "app.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylerchin/pink-fluffy-unicorns-dancing-on-rainbows.git"
+  },
+  "author": "Kyler Chin",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kylerchin/pink-fluffy-unicorns-dancing-on-rainbows/issues"
+  },
+  "homepage": "https://github.com/kylerchin/pink-fluffy-unicorns-dancing-on-rainbows#readme"
+}
