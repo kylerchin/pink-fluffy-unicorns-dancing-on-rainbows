@@ -93,7 +93,7 @@ client.on("message", async message => {
     message.channel.send("Pink fluffy unicorns dancing on dancing on rain");
   }
 
-  if(command === "video") {
+  if(command === "video" || command === "v" || command === "music") {
     message.channel.send("https://youtu.be/eWM2joNb9NE");
   }
 
@@ -108,6 +108,41 @@ client.on("message", async message => {
 
   if(command === "spotify") {
     message.channel.send("https://open.spotify.com/track/4Xn2RsLiDUDisOgJ24FigK?autoplay=true&v=T");
+  }
+
+  if(command === "help" || command === "h") {
+    msg.channel.send({embed: {color: 1687175,title: "Pink Fluffy Unicorns Help Page!",
+    fields: [{
+        name: "p h | p help",
+        value: "Displays this dialog!",
+          "inline": true
+      },
+      {
+          name: "p lyrics",
+          value: "Prints out lyrics to Pink Fluffy Unicorns! (Spam)",
+            "inline": true
+        },
+        {
+            name: "p video | p music",
+            value: "Plays the video!!",
+              "inline": true
+          },
+        {
+            name: "p about",
+            value: "Prints out information about Pink Fluffy Unicorns!",
+              "inline": true
+          },
+          {
+              name: "p spotify",
+              value: "Plays on Spotify!",
+                "inline": true
+            },
+    ],
+    footer: {
+      text: "Pink Fluffy Unicorns Dancing on Rainbows!"
+    }
+  }
+});
   }
 });
 
