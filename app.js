@@ -101,4 +101,8 @@ if(command === "about") {
   message.channel.send('https://youtu.be/3i7qlFz4-1Q');
 }
 
+if(command === "channel") {
+  message.channel.send('https://www.youtube.com/channel/UCdcemy56JtVTrsFIOoqvV8g');
+}
+
 client.login(config.token);
