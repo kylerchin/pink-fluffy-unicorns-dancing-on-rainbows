@@ -93,7 +93,7 @@ client.on("message", async msg => {
     msg.channel.send("Pink fluffy unicorns dancing on dancing on rain");
   }
 
-  if(command === "video" || command === "v" || command === "music") {
+  if(command === "video" || command === "v" || command === "music" || command === "link") {
     msg.channel.send("https://youtu.be/eWM2joNb9NE");
   }
 
