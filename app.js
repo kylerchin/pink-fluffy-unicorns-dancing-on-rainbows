@@ -105,6 +105,10 @@ client.on("message", async message => {
   if(command === "channel") {
     message.channel.send('https://www.youtube.com/channel/UCdcemy56JtVTrsFIOoqvV8g');
   }
+
+  if(command === "spotify") {
+    message.channel.send("https://open.spotify.com/track/4Xn2RsLiDUDisOgJ24FigK?autoplay=true&v=T");
+  }
 });
 
 client.login(config.token);
