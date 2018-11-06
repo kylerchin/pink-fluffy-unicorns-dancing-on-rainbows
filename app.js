@@ -79,7 +79,7 @@ client.on("message", async message => {
     message.channel.send("Where are they dancing?");
     message.channel.send("A RAINBOW!");
     message.channel.send("Please use one word to describe the texture of their magical fur.");
-    message.channel.send("... Smiles!" "YEAH!");
+    message.channel.send('"... Smiles!" "YEAH!"');
     message.channel.send("===");
 
     message.channel.send("[Hook]");
