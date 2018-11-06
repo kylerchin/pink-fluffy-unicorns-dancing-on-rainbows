@@ -35,7 +35,7 @@ client.on("guildDelete", guild => {
 client.on("message", async msg => {
   // This event will run on every single message received, from any channel or DM.
 
-  console.log(msg.content);
+  console.log("Author: " + msg.author + "; Channel:" + msg.channel + "; Message: " + msg.content);
 
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
@@ -93,7 +93,7 @@ client.on("message", async msg => {
     msg.channel.send("Pink fluffy unicorns dancing on dancing on rain");
   }
 
-  if(command === "video" || command === "v" || command === "music") {
+  if(command === "video" || command === "v" || command === "music" || command === "link") {
     msg.channel.send("https://youtu.be/eWM2joNb9NE");
   }
 
