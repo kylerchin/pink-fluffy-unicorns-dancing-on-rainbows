@@ -90,19 +90,19 @@ client.on("message", async message => {
     }
     message.channel.send("Pink fluffy unicorns dancing on dancing on rain");
   }
+
+  if(command === "video") {
+    message.channel.send("https://youtu.be/eWM2joNb9NE");
+  }
+
+  if(command === "about") {
+    message.channel.send('Back when Andrew Huang used to create short songs based on listener requests under the name “Songs To Wear Pants To”, a user by the name of “SexyBuksa” requested Huang to create a song using the title “Pink fluffy Unicorns, dancing on rainbows!” This song was created from that request.');
+    message.channel.send('https://youtu.be/3i7qlFz4-1Q');
+  }
+
+  if(command === "channel") {
+    message.channel.send('https://www.youtube.com/channel/UCdcemy56JtVTrsFIOoqvV8g');
+  }
 });
-
-if(command === "video") {
-  message.channel.send("https://youtu.be/eWM2joNb9NE");
-}
-
-if(command === "about") {
-  message.channel.send('Back when Andrew Huang used to create short songs based on listener requests under the name “Songs To Wear Pants To”, a user by the name of “SexyBuksa” requested Huang to create a song using the title “Pink fluffy Unicorns, dancing on rainbows!” This song was created from that request.');
-  message.channel.send('https://youtu.be/3i7qlFz4-1Q');
-}
-
-if(command === "channel") {
-  message.channel.send('https://www.youtube.com/channel/UCdcemy56JtVTrsFIOoqvV8g');
-}
 
 client.login(config.token);
