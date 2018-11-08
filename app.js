@@ -36,7 +36,6 @@ client.on("message", async msg => {
   // This event will run on every single message received, from any channel or DM.
 
   console.log("Author: " + msg.author + "; Channel:" + msg.channel + "; Message: " + msg.content);
-  console.log("Pink Fluffy Unicorns Dancing on Rainbows!");
 
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
@@ -67,23 +66,82 @@ client.on("message", async msg => {
     // To get the "message" itself we join the `args` back into a string with spaces:
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
     msg.delete().catch(O_o=>{});
-    // And we get the bot to say the thing:
-    msg.channel.send("**[Hook]**");
-    msg.channel.send("Pink fluffy unicorns dancing on rainbows (x4)");
-    msg.channel.send("===");
 
-    msg.channel.send("[Bridge]");
-    msg.channel.send("Let's test your knowledge and see what you've learned so far! What colour are the unicorns?");
-    msg.channel.send("PINK!");
-    msg.channel.send("Where are they dancing?");
-    msg.channel.send("A RAINBOW!");
-    msg.channel.send("Please use one word to describe the texture of their magical fur.");
-    msg.channel.send('"... Smiles!" "YEAH!"');
-    msg.channel.send("===");
+    const pinkFluffyUnicornsDancingOnRainbowsLyrics = {
+    color: 0xe91e63,
+    title: 'Pink Fluffy Unicorns Dancing On Rainbows',
+    url: 'https://genius.com/Andrew-huang-pink-fluffy-unicorns-dancing-on-rainbows-lyrics',
+    author: {
+        name: 'Andrew Huang',
+        icon_url: 'https://user-images.githubusercontent.com/7539174/48195367-4f9f1480-e304-11e8-9ecb-5a6714e14d3d.jpg',
+        url: 'https://andrewhuang.com',
+    },
+    fields: [
+        {
+            name: '',
+            value: '**[Hook]**',
+        },
+        {
+            name: '',
+            value: 'Pink fluffy unicorns dancing on rainbows (x4)',
+        },
+        {
+            name: '',
+            value: '===',
+        },
+        {
+            name: '',
+            value: '[Bridge]',
+        },
+        {
+            name: '',
+            value: "Let's test your knowledge and see what you've learned so far! What colour are the unicorns?",
+        },
+        {
+            name: '',
+            value: "PINK!",
+        },
+        {
+            name: '',
+            value: "Where are they dancing?",
+        },
+        {
+            name: '',
+            value: "A RAINBOW!",
+        },
+        {
+            name: '',
+            value: "Please use one word to describe the texture of their magical fur.",
+        },
+        {
+            name: '',
+            value: '"... Smiles!" "YEAH!"',
+        },
+        {
+            name: '',
+            value: "===",
+        },
+        {
+            name: '',
+            value: "[Hook]",
+        },
+        {
+            name: '',
+            value: "[Hook]",
+        },
+        {
+            name: '',
+            value: "Pink fluffy unicorns dancing on rainbows (x7)",
+        },
+        {
+            name: '',
+            value: "Pink fluffy unicorns dancing on dancing on rain",
+        },
+    ],
+    timestamp: new Date()
+};
 
-    msg.channel.send("[Hook]");
-      msg.channel.send("Pink fluffy unicorns dancing on rainbows (x7)");
-    msg.channel.send("Pink fluffy unicorns dancing on dancing on rain");
+msg.channel.send({ embed: pinkFluffyUnicornsDancingOnRainbowsLyrics });
   }
 
   if(command === "video" || command === "v" || command === "music" || command === "link") {
