@@ -68,11 +68,7 @@ client.on("message", async msg => {
     msg.delete().catch(O_o=>{});
     // And we get the bot to say the thing:
     msg.channel.send("**[Hook]**");
-    var step1;
-    for (step1 = 0; step1 < 4; step1++) {
-      // Runs 4 times, with values of step 0 through 3.
-      msg.channel.send("Pink fluffy unicorns dancing on rainbows");
-    }
+    msg.channel.send("Pink fluffy unicorns dancing on rainbows (x4)");
     msg.channel.send("===");
 
     msg.channel.send("[Bridge]");
@@ -85,11 +81,7 @@ client.on("message", async msg => {
     msg.channel.send("===");
 
     msg.channel.send("[Hook]");
-    var step2;
-    for (step2 = 0; step2 < 7; step2++) {
-      // Runs 4 times, with values of step 0 through 6.
-      msg.channel.send("Pink fluffy unicorns dancing on rainbows");
-    }
+      msg.channel.send("Pink fluffy unicorns dancing on rainbows (x7)");
     msg.channel.send("Pink fluffy unicorns dancing on dancing on rain");
   }
 
