@@ -11,6 +11,21 @@ const config = require("./config.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
+var openUnicorn = [
+  "          /| ",
+  " ~～～～~/ | ",
+  "|       O  O ",
+  "|         ∇ |",
+  " ~~~~∪∪~~~∪∪ "
+];
+var closeUnicorn = [
+  "          /| ",
+  " ～～～～/ | ",
+  "|       ⌒  ⌒ ",
+  "|         ∇ |",
+  " ~~∪∪~~~∪∪~~ "
+]
+
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
