@@ -78,64 +78,60 @@ client.on("message", async msg => {
     },
     fields: [
         {
-            name: '',
-            value: '**[Hook]**',
+            name: '**[Hook]**',
+            value: '',
         },
         {
-            name: '',
-            value: 'Pink fluffy unicorns dancing on rainbows (x4)',
+            name: 'Pink fluffy unicorns dancing on rainbows (x4)',
+            value: '',
         },
         {
-            name: '',
-            value: '===',
+            name: '===',
+            value: '',
         },
         {
-            name: '',
-            value: '[Bridge]',
+            name: '[Bridge]',
+            value: '',
         },
         {
-            name: '',
-            value: "Let's test your knowledge and see what you've learned so far! What colour are the unicorns?",
+            name: "Let's test your knowledge and see what you've learned so far! What colour are the unicorns?",
+            value: "",
         },
         {
-            name: '',
-            value: "PINK!",
+            name: "PINK!",
+            value: '',
         },
         {
-            name: '',
-            value: "Where are they dancing?",
+            name: "Where are they dancing?",
+            value: "",
         },
         {
-            name: '',
-            value: "A RAINBOW!",
+            name: "A RAINBOW!",
+            value: "",
         },
         {
-            name: '',
-            value: "Please use one word to describe the texture of their magical fur.",
+            name: "Please use one word to describe the texture of their magical fur.",
+            value: "",
         },
         {
-            name: '',
-            value: '"... Smiles!" "YEAH!"',
+            name: '"... Smiles!" "YEAH!"',
+            value: "",
         },
         {
-            name: '',
-            value: "===",
+            name: '===',
+            value: "",
         },
         {
-            name: '',
-            value: "[Hook]",
+            name: '[Hook]',
+            value: "",
         },
         {
-            name: '',
-            value: "[Hook]",
+            name: 'Pink fluffy unicorns dancing on rainbows (x7)',
+            value: "",
         },
         {
-            name: '',
-            value: "Pink fluffy unicorns dancing on rainbows (x7)",
-        },
-        {
-            name: '',
-            value: "Pink fluffy unicorns dancing on dancing on rain",
+            name: 'Pink fluffy unicorns dancing on dancing on rain',
+            value: "",
         },
     ],
     timestamp: new Date()
