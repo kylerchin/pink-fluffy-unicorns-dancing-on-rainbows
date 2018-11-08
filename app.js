@@ -79,60 +79,32 @@ client.on("message", async msg => {
     fields: [
         {
             name: '**[Hook]**',
-            value: '',
-        },
-        {
-            name: 'Pink fluffy unicorns dancing on rainbows (x4)',
-            value: '',
+            value: 'Pink fluffy unicorns dancing on rainbows (x4)',
         },
         {
             name: '===',
-            value: '',
-        },
-        {
-            name: '[Bridge]',
-            value: '',
+            value: '[Bridge]',
         },
         {
             name: "Let's test your knowledge and see what you've learned so far! What colour are the unicorns?",
-            value: "",
-        },
-        {
-            name: "PINK!",
-            value: '',
+            value: "PINK!",
         },
         {
             name: "Where are they dancing?",
-            value: "",
-        },
-        {
-            name: "A RAINBOW!",
-            value: "",
+            value: "A RAINBOW!",
         },
         {
             name: "Please use one word to describe the texture of their magical fur.",
-            value: "",
-        },
-        {
-            name: '"... Smiles!" "YEAH!"',
-            value: "",
+            value: '"... Smiles!" "YEAH!"',
         },
         {
             name: '===',
-            value: "",
-        },
-        {
-            name: '[Hook]',
-            value: "",
+            value: '[Hook]',
         },
         {
             name: 'Pink fluffy unicorns dancing on rainbows (x7)',
-            value: "",
-        },
-        {
-            name: 'Pink fluffy unicorns dancing on dancing on rain',
-            value: "",
-        },
+            value: 'Pink fluffy unicorns dancing on dancing on rain',
+        }
     ],
     timestamp: new Date()
 };
