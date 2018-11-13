@@ -11,6 +11,11 @@ const config = require("./config.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
+//Load DiscordBots.org Api dblapi.js
+const DBL = require("dblapi.js");
+//import DiscordBots.org token
+const dbl = new DBL(config.dbltoken, client);
+
 var openUnicorn = [
   "          /| ",
   " ~～～～~/ | ",
@@ -32,6 +37,9 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
   client.user.setActivity(`Prefix: p | p help`);
+  setInterval(() => {
+        dbl.postStats(client.guilds.size);
+    }, 10000);
 });
 
 client.on("guildCreate", guild => {
