@@ -150,6 +150,10 @@ msg.channel.send({ embed: pinkFluffyUnicornsDancingOnRainbowsLyrics });
   if(command === "spotify") {
     msg.channel.send("https://open.spotify.com/track/4Xn2RsLiDUDisOgJ24FigK?autoplay=true&v=T");
   }
+  
+    if(command === "vote") {
+    msg.channel.send("https://discordbots.org/bot/509165623113154571/vote");
+  }
 
   if(command === "help" || command === "h") {
     msg.channel.send({embed: {color: 1687175,title: "Pink Fluffy Unicorns Help Page!",
