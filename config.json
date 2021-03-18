@@ -1,5 +1,11 @@
 { 
+<<<<<<< HEAD
   "token"  : "NTA5MTY1NjIzMTEzMTU0NTcx.W-DjcA.MglJfUzY71t34QJdzP1iTgplskY",
   "prefix" : "p",
   "dbltoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwOTE2NTYyMzExMzE1NDU3MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTQyMDEzNDUwfQ.SRCS11bje5vN6zLF32hT0E32KiJuC4zj225gFr-9KsA"
+=======
+  "token"  : "MTg-this-IzNzU3OTA5NjA-is.not-DCeFB-a.real-r4DQlO-t0ken-qerT0",
+  "prefix" : "p",
+  "dbltoken": "INSERTDBLTOKEN"
+>>>>>>> 6cb327cd79a331fd48b0f4d6f100ddca8be9a032
 }
