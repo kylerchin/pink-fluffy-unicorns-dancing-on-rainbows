@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
-const client = new Discord.Client();
+const client = new Discord.Client({retryLimit: Infinity});
 
 // Here we load the config.json file that contains our token and our prefix values.
 const config = require("./config.json");
@@ -50,7 +50,7 @@ client.on("guildDelete", guild => {
 client.on("message", async msg => {
   // This event will run on every single message received, from any channel or DM.
 
-  console.log("Author: " + msg.author + "; Channel:" + msg.channel + "; Message: " + msg.content);
+  //console.log("Author: " + msg.author + "; Channel:" + msg.channel + "; Message: " + msg.content);
 
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
