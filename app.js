@@ -37,9 +37,14 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
   client.user.setActivity(`Prefix: p | p help`);
+  try {
   setInterval(() => {
         dbl.postStats(client.guilds.size);
     }, 10000);
+  }
+  catch (error) {
+    console.error(error)
+  }
 });
 
 client.on("guildCreate", guild => {
